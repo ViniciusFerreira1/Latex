@@ -42,14 +42,14 @@
 %Cria o titulo do Documento
 \maketitle{TESTE}
 % Pacote de espaçamento usar junto com o package setspace 
-\onehalfspacing 
+\onehalfspacing
 %Cria um ambiente alinhado a esquerda, direira e centro atraves do flush- righ center or left%
 \begin{flushleft}
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 \end{flushleft}
 
 \begin{flushright}
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 \end{flushright}
 
 %\begin{flushcenter}
@@ -58,7 +58,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 \\
 
 Criar um novo paragrafo basta apertar enter aqui no editor no pdf ele ignora %% \\ ou \newline{} para quebrar a 
- linha
+linha
 \newline teste
 
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. \\
@@ -71,19 +71,19 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 \sout{Texto Subilihado e Riscado!}\\
 % Tamnho da Fonte 
 \begin{tiny} % melhor pois nao altera o texto global
-Texto
+    Texto
 \end{tiny}\\
 
 \begin{scriptsize}
-Texto Tamanho Script
+    Texto Tamanho Script
 \end{scriptsize}\\
 
 \begin{footnotesize}
-Texto Tamanho Rodapé
+    Texto Tamanho Rodapé
 \end{footnotesize}\\
 
 \begin{small}
-Texto Tamanho Pequeno
+    Texto Tamanho Pequeno
 \end{small}
 %\normalsize{Texto Tamanho Normal}\\
 %\large{Texto Tamanho Grande}\\
@@ -102,8 +102,8 @@ Texto Tamanho Pequeno
     \item %Lista nao enumerada
     \item $\heartsuit$] Marcador Personalizado Coração
 \end{enumerate}
-    %\item [$\sharp$] Marcador Personalização Sharp
-    %\item Marcador Infinito
+%\item [$\sharp$] Marcador Personalização Sharp
+%\item Marcador Infinito
 %Lista Numérica
 \begin{enumerate}
     \item Item Enumero \textbf{Teste}
@@ -112,11 +112,11 @@ Texto Tamanho Pequeno
 
 %lista com sublista se quiser com numeros usar o \setlist la no preanbulo
 \begin{enumerate}
-    \item \begin{itemize}  
-        \item Teste
-        \item  Teste2
-    \end{itemize}
-    Item 2
+    \item \begin{itemize}
+              \item Teste
+              \item  Teste2
+          \end{itemize}
+          Item 2
 \end{enumerate}
 
 %Inserir Comentarios utilizando desde o principio 
@@ -171,10 +171,51 @@ Frase Teste do Rodapé com o marcador 1\footnote{Teste Roda Pe}
 %Vinicius FAO
 %Caso queiram fazer a linha centralizada
 \begin{center}
-\noindent
-\rule{10cm}{0.02cm}\\
-Vinicius FAO
+    \noindent
+    \rule{10cm}{0.02cm}\\
+    Vinicius FAO
 \end{center}
+%linha Seperadora \hrulefill
+
+\newpage
+Contrary to popular belief,
+Lorem Ipsum is not simply random text.
+It has roots in a piece of classical Latin literature from 45 BC,
+making it over 2000 years old. Richard McClintock, a Latin professor
+at Hampden-Sydney College in Virginia, looked up one of the more obscure
+Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,
+discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+(The Extremes of Good and Evil) by Cicero, written in 45 BC.\\
+
+%\hrulefill %tem que dar espaco entre paragrafo e outro se colocar um \\ espaça ainda mais 
+%Linha pontilhada dcom \dotfill
+\dotfill\\
+Lorem Ipsum is not simply random text.
+It has roots in a piece of classical Latin literature from 45 BC,
+making it over 2000 years old. Richard McClintock, a Latin professor
+at Hampden-Sydney College in Virginia, looked up one of the more obscure\\
+%Espaçamento vertical com rule
+%Espaçamento para duas assinaturas exemplo
+\begin{center}
+    \rule{10cm}{0.02cm}\\
+    Pessoa Teste
+
+    \vspace{2cm}
+
+    \rule{10cm}{0.02cm}\\
+    Vinicius FAO
+\end{center}
+
+%Especamento horizontal com \hspace{l}
+Teste de frase com \hspace{1cm} para separa a frase\\
+Teste de frase com              para separa a frase
+
+
+
+
+
+
+
 \end{document}
 
 
