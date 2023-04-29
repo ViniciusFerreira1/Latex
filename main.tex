@@ -1,0 +1,182 @@
+%Definição do tipo do documento tamanho da fonte, folha e o lado de escrita
+\documentclass[12pt, a4paper, onside]{article}
+%Pacote de Fonte acentuação
+\usepackage{fontenc} 
+%Pacote de Tradução idioma texto
+\usepackage[brazilian]{babel} 
+%Pacote Conversao para UTF8
+\usepackage[utf8]{inputenc} 
+%Pacote para ajuste das margens da folha
+\usepackage[top = 2cm, bottom = 2cm, left = 2.5cm, right = 2.5cm]{geometry}
+%espacçamento das linhas e paragrafos
+%\linespread{1.3} 
+% espaçamento de forma reduzida singlespacin 1cm onehalf 1.5cm e double 2cm
+\usepackage{setspace} 
+% pacote para utilizar estilo riscado em italico usar com \textit
+\usepackage{ulem}
+% Pacote de identacao primeiro por padrao latex entende que é um novo paragrafo a cada final de paragrafo
+% usar com \noindent ou \indentfirst right left
+\usepackage{indentfirst}
+%Pacote para criar listas enumeradas com sublistas e subitens 1.1 1.0.1 exemplo
+\usepackage{enumitem}
+\setlist[enumerate]{label*=\arabic*.}
+%Ver topico de hifenação
+\hyphenation{pa-la-vra}
+%Pacote de cores veja na flexbox todas as cores RGB
+\usepackage{color}
+%Outros pacotes de Cores
+\usepackage[dvipsnames,svgnames]{xcolor}
+
+%Estrutra Basica TIpo do documento, Inicio e fim do documento semelhante a HTML 
+%<body>   flushparaalinhamento </body>%
+
+%Inicio do Documento
+\begin{document}
+
+%Inserir Titulo
+\title{Titulo do Documento}
+%Inserir Autor
+\author{Autor sou eu ué, Outro desconhecido \footnote{Aluno do IFSP}}  %coloca dois autores%
+%Inserir data caso nao opte pela automatica
+\date{20 de abril definida 2023} %A data pode ser definida automaticamente ao remover esta tag% 
+%Cria o titulo do Documento
+\maketitle{TESTE}
+% Pacote de espaçamento usar junto com o package setspace 
+\onehalfspacing 
+%Cria um ambiente alinhado a esquerda, direira e centro atraves do flush- righ center or left%
+\begin{flushleft}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+\end{flushleft}
+
+\begin{flushright}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+\end{flushright}
+
+%\begin{flushcenter}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+%\end{flushcenter}
+\\
+
+Criar um novo paragrafo basta apertar enter aqui no editor no pdf ele ignora %% \\ ou \newline{} para quebrar a 
+ linha
+\newline teste
+
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. \\
+
+%Estilizar as palavras
+\noindent
+\textbf{Texto em Negrito!} \textit{Texto em Itálico}\\
+\underline{Texto Sublinhado!} \textsf{Texto em Sans-Serif!}\\
+\texttt{Texto em Letra de Máquina!} \textrm{Texto Em Romano!}\\
+\sout{Texto Subilihado e Riscado!}\\
+% Tamnho da Fonte 
+\begin{tiny} % melhor pois nao altera o texto global
+Texto
+\end{tiny}\\
+
+\begin{scriptsize}
+Texto Tamanho Script
+\end{scriptsize}\\
+
+\begin{footnotesize}
+Texto Tamanho Rodapé
+\end{footnotesize}\\
+
+\begin{small}
+Texto Tamanho Pequeno
+\end{small}
+%\normalsize{Texto Tamanho Normal}\\
+%\large{Texto Tamanho Grande}\\
+%\Large{Texto Tamanho Grande+}\\
+%\LARGE{Texto Tamanho Grande++}\\
+%\huge{Texto Tamanho Grande++}\\
+%\Huge{Texto Tamanho Grande+++}
+%Listagem de Item Marcação
+\begin{itemize}
+    \item Marcador Simples
+    \item Marcador simples2
+\end{itemize}
+
+% Estilizar Item
+\begin{enumerate}
+    \item %Lista nao enumerada
+    \item $\heartsuit$] Marcador Personalizado Coração
+\end{enumerate}
+    %\item [$\sharp$] Marcador Personalização Sharp
+    %\item Marcador Infinito
+%Lista Numérica
+\begin{enumerate}
+    \item Item Enumero \textbf{Teste}
+    \item Item Numero 2 \textit{Teste}
+\end{enumerate}
+
+%lista com sublista se quiser com numeros usar o \setlist la no preanbulo
+\begin{enumerate}
+    \item \begin{itemize}  
+        \item Teste
+        \item  Teste2
+    \end{itemize}
+    Item 2
+\end{enumerate}
+
+%Inserir Comentarios utilizando desde o principio 
+%Utilizar com boas práticas para criar basta inserir um % antes da frase 
+
+%Notas de rodapé
+%Pode ser colocada em independente da pagina 
+
+Frase Teste do Rodapé com o marcador 1\footnote{Teste Roda Pe}
+
+
+%Hifenação dividir a palavra correttamente em termos silabicamente
+%depois que terminar de revisar o texto caso a palavra esteja errado é necessario
+%COlocar o \hyphenation{pa-la-vra} que voce deseja dividir corretamente
+
+%Seções de um Documento divisao organizada do texto em latex
+%capitulo seção sub seção  seção esta dentro do capitulo
+%\chaper
+%\subsection
+%\subsubsection só é numerada em artigos
+% * acrenter asteristioc para nao numerar capitulo seção etc
+%È reservaod uma pagina nova 
+% em artigo o chaper é ignorado nao é compliado no pdf e nao é criado uma nova folha
+%\chapter{Introdução Capitulo} 
+\section{Seção do capitulo 01}
+\subsection{SubSeção da Seção 01 do Capitulo}
+\subsubsection{SubSubSeção da SubSeção da Seção 01 do Capitulo}
+
+%\chapter*{Introdução Capitulo Nao Numerado}
+%\section*{Seção do capitulo 01 Nao Numerado}
+%\subsection*{SubSeção da Seção 01 do Capitulo Nao Numerado}
+
+%Cores para o documento
+%usar \color ni package
+\definecolor{Verde primavera}{RGB}{147,178,125}
+\textcolor{Verde primavera}{Teste em Verde!}
+%outras cores e tonalidades é necessario uma biblioteca \color -> dvipsnames svgnames
+{\color{Aqua}{Trecho em Azul!}}
+%mudar o fundo de pagina caixa de cor
+%\pagecolor{blue}
+%mudar caixa de cor
+\colorbox{Purple}{Caixa em Roxo!}
+%Caixa de Borda
+\fcolorbox{red}{blue}{Caixa de borda!}
+
+%Ferramentas Uteis de Trabalho!
+%assinatura comprimento e espessura em centimetros
+%Criar nova pagina
+\newpage
+%\noindent
+%\rule{10cm}{0.02cm}\\
+%Vinicius FAO
+%Caso queiram fazer a linha centralizada
+\begin{center}
+\noindent
+\rule{10cm}{0.02cm}\\
+Vinicius FAO
+\end{center}
+\end{document}
+
+
+
+
